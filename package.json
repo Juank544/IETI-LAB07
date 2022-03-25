@@ -19,17 +19,19 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install",
+    "format": "prettier --write"
   },
   "eslintConfig": {
     "extends": [
+      "eslint:recommended",
       "react-app",
       "react-app/jest",
-      "eslint:recommended",
       "prettier"
     ]
   },
-  "prettier":{},
+  "prettier": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,6 +45,9 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.11.0"
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "7.0.4",
+    "prettier": "^2.6.0"
   }
 }
