@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useReducer} from "react";
 import { Routes, Route } from "react-router";
 import {useNavigate} from 'react-router-dom';
 import Dashboard from "./components/Dashboard";
+import { themeReducer, initialState } from "./utils";
 
 function App(){
+  const [state, dispatch] = useReducer(themeReducer, initialState);
   return(
     <div>
       <Routes>
